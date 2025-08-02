@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #333;
+    color: #eee;
+    font-family: 'Press Start 2P', cursive;
+}
+
+canvas {
+    background-color: #000;
+    border: 2px solid #eee;
+}
+
+#scoreDisplay {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Match canvas width */
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dpad-container {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+}
+
+.dpad-button {
+    width: 60px;
+    height: 60px;
+    background-color: #555;
+    color: white;
+    border: 2px solid #777;
+    border-radius: 5px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection on touch */
+}
+
+.dpad-button:active {
+    background-color: #777;
+}
+
+#upButton {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.dpad-middle-row {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#leftButton {
+    margin-right: auto;
+}
+
+#rightButton {
+    margin-left: auto;
+}
+
+#downButton {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.action-button {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #0056b3;
+    border-radius: 50%; /* Make it round */
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.action-button:active {
+    background-color: #0056b3;
+}
+
+/* Media query for smaller screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .dpad-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+
+    .dpad-container {
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: repeat(3, 50px);
+    }
+
+    .action-button {
+        width: 80px;
+        height: 80px;
+        font-size: 1em;
+    }
+}

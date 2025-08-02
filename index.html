@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle City Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Battle City Clone</h1>
+    <div id="scoreDisplay"></div>
+    <canvas id="gameCanvas" width="600" height="600"></canvas>
+    <button id="restartButton" style="display: none;">Reiniciar Juego</button>
+    <div class="controls-container">
+        <div class="dpad-container">
+            <button id="upButton" class="dpad-button">▲</button>
+            <div class="dpad-middle-row">
+                <button id="leftButton" class="dpad-button">◀</button>
+                <button id="rightButton" class="dpad-button">▶</button>
+            </div>
+            <button id="downButton" class="dpad-button">▼</button>
+        </div>
+        <button id="fireButton" class="action-button">Disparar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
